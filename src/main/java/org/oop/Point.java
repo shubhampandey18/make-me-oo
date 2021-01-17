@@ -10,14 +10,14 @@ public class Point {
     }
 
     public double distanceFrom(Point from) {
-        double xDistance = from.x - this.x;
-        double yDistance = from.y - this.y;
-        return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+        return Math.sqrt(Math.pow(difference(from.x, this.x), 2) + Math.pow(difference(from.y, this.y), 2));
     }
 
     public double directionFrom(Point from) {
-        double xDistance = from.x - this.x;
-        double yDistance = from.y - this.y;
-        return Math.atan2(yDistance, xDistance);
+        return Math.atan2(difference(from.y, this.y), difference(from.x, this.x));
+    }
+
+    private double difference(double point1, double point2) {
+        return point1 - point2;
     }
 }
