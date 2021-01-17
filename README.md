@@ -26,3 +26,17 @@ He thought it'll be a good idea to convert this to Object Oriented Programming. 
 However, his trainer told him that what he did is not Object Oriented programming and asked Shivam to try again. 
 - Try to articulate problems with Shivam's OOP solution. (Write it somewhere and share it with your trainer)
 - Fork the project and fix the design related problem with Shivam's OOP solution. Share that with your trainer too.
+
+Problem in Shivam's Solution:
+ - Point class lacks behaviour of its own.
+ - DistanceAnsDirectionsCalculator has no properties of its own.
+ - Usage of getters and setters in Point class.
+ - There is no relation between method for calculating distance and direction with that of its class.
+ - Encapsulation property is violating for both the classes.
+
+My Solution:
+ - Add behaviour to Point class for calculating distance and direction from a given point to itself.
+ - DistanceAnsDirectionsCalculator class has no use, so that is removed.
+ - Encapsulation for Point class is restored now.
+ - Minimized elements by defining difference function(rather creating local variables for storing the difference).
+ 
